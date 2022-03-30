@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Product Ingest",
+    "version": "0.8.0",
+    "description": "A product scraper & ingestion utility for Discovery AEM",
+    "author": "David Hodge",
+    "browser_action": {
+        "default_icon": "shop.png",
+        "default_title": "Product Ingest",
+        "default_popup": "product/product.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "clipboardWrite", 
+        "notifications",
+        "https://*/"
+    ]
+}

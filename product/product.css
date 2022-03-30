@@ -1,0 +1,95 @@
+body {
+    min-width: 500px;
+}
+
+.card-image {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPjxwYXR0ZXJuICBpZD0nZGlhZ29uYWxIYXRjaCcgcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgd2lkdGg9JzUnIGhlaWdodD0nNSc+PHBhdGggY2xhc3M9J2RpYWdvbmFsLTEnIHN0cm9rZT0nI0Q0RDRENCcgZmlsbD0nI2ZmZicgZD0nTTEuNS41TDEwLjUgOS41TS41IDQuNUw5LjUgMTMuNScgZmlsbC1ydWxlPSdldmVub2RkJyBzdHJva2UtbGluZWNhcD0nc3F1YXJlJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMiAtMyknIC8+PC9wYXR0ZXJuPiA8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2RpYWdvbmFsSGF0Y2gpJy8+PC9zdmc+") no-repeat;
+}
+
+.card-image img {
+    object-fit: contain;
+}
+
+.column {
+    padding-bottom: 0;
+}
+
+.productForm .is-clipped {
+    margin-bottom: 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-header {
+    padding: 10px 14px;
+    background-color: #a2a2a2;
+    color: white;
+}
+
+.modal-body {
+    padding: 14px;
+}
+
+.modal-footer {
+    padding-left: 14px;
+    padding-bottom: 14px;
+}
+
+.modal-footer .button {
+    margin-right: 10px;
+    min-width: 25%;
+}
+
+.btn-overwrite {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.btn-overwrite:hover {
+    background-color: #ee0000;
+    color: #fff;
+}
+
+.btn-create {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.btn-create:hover {
+    background-color: #eea500;
+    color: #fff
+}

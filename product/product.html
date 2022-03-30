@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bulma.min.css">
+    <link rel="stylesheet" href="product.css">
+    <title>Product</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <form class="productForm">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input id="name" name="name" class="input" type="text" placeholder="Product name" required>
+                    </div>
+                </div>
+                <div class="columns is-mobile is-clipped">
+                    <div class="field column is-two-thirds">
+                        <label class="label">Advertiser</label>
+                        <div class="control">
+                            <input id="advertiser" name="advertiser" class="input" type="text" placeholder="Product advertiser">
+                        </div>
+                    </div>
+
+                    <div class="field column is-one-third">
+                        <label class="label">Price</label>
+                        <div class="control">
+                            <input id="price" name="price" class="input" type="text" pattern="^\$?[0-9,]+\.?[0-9]{0,2}$" placeholder="Product price">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Price Display</label>
+                    <div class="control">
+                        <input id="priceDisplay" name="priceDisplay" class="input" type="text" placeholder="Price display">
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Description</label>
+                    <div class="control">
+                        <textarea id="description" name="description" class="textarea" placeholder="Product description"></textarea>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">URL</label>
+                    <div class="control">
+                        <input id="url" name="url" class="input" type="url" placeholder="Product URL" required>
+                    </div>
+                </div>
+
+                <div class="columns is-mobile is-clipped">
+                    <div class="field column is-two-thirds">
+                        <label class="label">Image Prefix</label>
+                        <div class="control">
+                            <input id="imagePrefix" name="imagePrefix" class="input" type="text" placeholder="Image prefix" required>
+                        </div>
+                    </div>
+                
+                    <div class="field column is-one-third">
+                        <label class="label">Brand</label>
+                        <div class="select">
+                            <select id="brand" name="brand">
+                                <option value="hgtv" selected>HGTV</option>
+                                <option value="food">Food</option>
+                                <option value="travel">Travel</option>
+                                <option value="diy">DIY</option>
+                                <option value="gac">GAC</option>
+                                <option value="cook">CCTV</option>
+                                <option value="tlc">TLCMe</option>
+                                <option value="discovery">Discovery</option>
+                                <option value="investigationdiscovery">Crimefeed</option>
+                                <option value="golfdigest">Golf</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Image</label>
+                    <div class="control">
+                        <input id="image" name="image" class="input" type="url" placeholder="Product image" required>
+                    </div>
+                </div>
+                
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button id="submitProduct" class="button is-success">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="confirmationModal" class="modal">
+
+                <!-- Modal content -->
+                <div id="confirmationModalContent" class="modal-content">
+                    <div class="modal-header">
+                        <h2>Are you sure?</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id="duplicateMessage">This Product Record Already Exists: </p>
+                        <p>What would you like to do?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="overwriteButton" title="Overwrite the existing product" class="button btn-overwrite">Overwrite</button>
+                        <button id="createNewButton" title="Create a new record anyway" class="button btn-create">Create New</button>
+                        <button id="cancelSubmissionButton" title="Cancel and copy existing path" class="button is-success">Exit and Copy</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <script src="product.js"></script>
+</body>
+</html>
