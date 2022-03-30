@@ -27,8 +27,8 @@ function save_options(e) {
 function restore_options() {
     // Use default value
     chrome.storage.local.get({
-        domain: 'hgtv-prod2',
-        brand: 'hgtv',
+        domain: '',
+        brand: '',
         destination: false
     }, items => {
         document.querySelector('#domain').value = items.domain;

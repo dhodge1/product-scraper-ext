@@ -5,10 +5,10 @@
     const productPort = chrome.runtime.connect({ name: 'product-port' });
     let products = getAllProducts();
     const options = {
-        domain: 'https://author.hgtv-prod2.sni.hgtv.com',
-        token: '/libs/granite/csrf/token.json',
-        api: '/apps/author/api/product-extension',
-        brand: 'hgtv'
+        domain: 'yourDomain',
+        token: '/path/to/token',
+        api: '/path/to/API',
+        brand: 'exampleBrand'
     };
     let currentProduct;
     let productPath;
@@ -50,11 +50,6 @@
 
     function getOptions() {
         chrome.storage.local.get(['domain', 'brand', 'destination'], (results) => {
-            if(results.brand && results.brand === 'sports' ){
-              options.domain = results.domain ? `https://author.${results.domain}.sports.aws.discovery.com` : options.domain;
-            } else {
-              options.domain = results.domain && results.brand ? `https://author.${results.domain}.sni.${results.brand}.com` : options.domain;
-            }
             options.brand = results.brand || options.brand;
             if (results.destination) {
                 options.destination = results.destination;
